@@ -66,7 +66,7 @@ var submitMusic = function(){
 //end variable declaration
 
    var postData = null;
-  client.sendRequest("GET", post, postData, "text/plain", {}, false,
+  client.sendRequest("POST", post, postData, "text/plain", {}, false,
   function(data, type) {
     console.log(data);
   },
@@ -76,6 +76,27 @@ var submitMusic = function(){
 
   //Additional own javascript
  return returnData;
+}
+
+// getMusic
+var getMusic = function(){
+
+//start variable declaration
+   var getReturn = null;
+
+//end variable declaration
+
+   var getData = null;
+  client.sendRequest("GET", get, getData, "text/plain", {}, false,
+  function(data, type) {
+    console.log(data);
+  },
+  function(error) {
+    console.log(error);
+  });
+
+  //Additional own javascript
+ return getReturn;
 }
 
 
