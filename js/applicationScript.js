@@ -79,7 +79,9 @@ var submitMusic = function(){
 }
 
  
-var 
+var loadMusic = function() { 
+} 
+
 $(document).ready(function() {
   init();
 });
