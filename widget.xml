@@ -93,7 +93,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <div class="container" id="main-content">
 
    
-<table id='table-music'  style="table table-striped" ">  <tr>
+<table id='table-music'  style="table table-striped">  <tr>
     <th>Column 1</th>
     <th>Column 2</th> 
     <th>Column 3</th>
