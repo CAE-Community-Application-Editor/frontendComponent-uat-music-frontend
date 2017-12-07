@@ -41,7 +41,8 @@ var init = function() {
   };
 
   client = new Las2peerWidgetLibrary("http://cloud10.dbis.rwth-aachen.de:8080/musicApp/v1.0/", iwcCallback);
-
+ 
+    getMusic();
   $('#button-save').on('click', function() {
     //start parameter initiation
 
