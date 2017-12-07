@@ -93,26 +93,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <div class="container" id="main-content">
 
    
-<table id='table-music'  style="table table-striped">  <tr>
-    <th>Column 1</th>
-    <th>Column 2</th> 
-    <th>Column 3</th>
-  </tr>
-  <tr>
-    <td>Edit me!</td>
-    <td>Edit me!</td> 
-    <td>Edit me!</td>
-  </tr>
-  <tr>
-    <td>Edit me!</td>
-    <td>Edit me!</td> 
-    <td>Edit me!</td>
-  </tr>
-  <tr>
-    <td>Edit me!</td>
-    <td>Edit me!</td> 
-    <td>Edit me!</td>
-  </tr></table>
+<table id='table-music'  style="table table-striped"><thead>
+        <tr>
+          <th scope="col">Image Name</th>
+          <th scope="col">Image</th>
+          <th scope="col">Music Name</th>
+          <th scope="col">Music</th>
+        </tr>
+      </thead>
+      <tbody id="table-music-body">
+      </tbody> 
+</table>
 
    
 <input id='txt-image-name'  style=" "> </input>
