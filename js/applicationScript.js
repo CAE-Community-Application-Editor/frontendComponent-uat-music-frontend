@@ -65,11 +65,24 @@ var submitMusic = function(){
    var returnData = null;
 
 //end variable declaration
+// get values
+    var imageName = $("#txt-image-name").val();
+    var imageUrl = $("#txt-image-url").val();
+    var musicName = $("#txt-music-name").val();
+    var musicUrl = $("#txt-music-url").val();
 
-   var postData = null;
-  client.sendRequest("POST", post, postData, "text/plain", {}, false,
+    var postData = { 
+        imageName: imageName, 
+        imageUrl: imageUrl, 
+        musicName: musicName, 
+        musicUrl: musicUrl, 
+    };
+
+  client.sendRequest("POST", "post", JSON.stringify(postData), "text/plain", {}, false,
   function(data, type) {
+    console.log("POST DATA");
     console.log(data);
+    getMusic();
   },
   function(error) {
     console.log(error);
@@ -88,11 +101,27 @@ var getMusic = function(){
 //end variable declaration
 
    var getData = null;
-  client.sendRequest("GET", get, getData, "text/plain", {}, false,
+  client.sendRequest("GET", "get", "application/json", {}, false,
   function(data, type) {
+    console.log("GET DATA");
     console.log(data);
+    $("#table-music-body").html("");
+        data.forEach(function(item) {
+            // append to table
+            $("#table-music-body").append(
+                "<tr>" + 
+                    "<td>" + item["imageName"] + "</td>" +
+                    "<td><img src='" + item["imageUrl"] + "' width='100'></td>" +
+                    "<td>" + item["musicName"] + "</td>" +
+                    "<td><audio controls><source src='" + item["musicUrl"] + "' type='audio/mpeg'>" +
+                    "Your browser does not support the audio element.</audio></td>" +
+                "</tr>"
+            );
+            
+        });
   },
   function(error) {
+    console.log("ERROR GET DATA");
     console.log(error);
   });
 
