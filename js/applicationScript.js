@@ -101,7 +101,7 @@ var getMusic = function(){
 //end variable declaration
 
    var getData = null;
-  client.sendRequest("GET", "get", "application/json", {}, false,
+  client.sendRequest("GET", "get", "", "application/json", {},
   function(data, type) {
     console.log("GET DATA");
     console.log(data);
