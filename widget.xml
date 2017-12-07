@@ -85,15 +85,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <script type="text/javascript" src="http://cloud10.dbis.rwth-aachen.de:8088/frontendComponent-uat-music-frontend/js/lib/las2peerWidgetLibrary.js"></script>
   <!-- import application script -->
   <script type="text/javascript" src="http://cloud10.dbis.rwth-aachen.de:8088/frontendComponent-uat-music-frontend/js/applicationScript.js"></script>
+  <script type="text/javascript" src="http://cloud10.dbis.rwth-aachen.de:8088/frontendComponent-uat-music-frontend/js/bootstrap.js"></script>
 
 </head>
 <body>
 
   <!-- container for actual page content -->
-  <div class="container" id="main-content">
+  <div class="container container-fluid" id="main-content">
 
    
-<table id='table-music'  style="table table-striped"><thead>
+    <table id="table-music" class="table table-striped">
+      <thead>
         <tr>
           <th scope="col">Image Name</th>
           <th scope="col">Image</th>
@@ -102,26 +104,41 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </tr>
       </thead>
       <tbody id="table-music-body">
-      </tbody> 
-</table>
+      </tbody>
+    </table>
+    
+    <hr />
 
    
-<input id='txt-image-name'  style="form-control "> </input>
-
-   
-<input id='txt-image-url'  style="form-control "> </input>
-
-   
-<input id='txt-music-url'  style="form-control "> </input>
-
-   
-<input id='txt-music-name'  style="form-control "> </input>
-
-   
-<div id='container-form'  style=" "> </div>
-
-   
-<button id='button-save' value="Save"  style="success "> </button>
+    <h4>Add new entry</h4>
+    <form id="rendered-form">
+      <div class="rendered-form form-group">
+        
+        <div class="fb-text form-group field-txt-music-name">
+          <label for="txt-music-name" class="fb-text-label">Music Name<span class="fb-required">*</span></label>
+          <input type="text" class="form-control" name="txt-music-name" id="txt-music-name" required="required" aria-required="true">
+        </div>
+        
+        <div class="fb-text form-group field-txt-music-url">
+          <label for="txt-music-url" class="fb-text-label">Music URL<span class="fb-required">*</span></label>
+          <input type="text" class="form-control" name="txt-music-url" id="txt-music-url" required="required" aria-required="true">
+        </div>
+        
+        <div class="fb-text form-group field-txt-image-name">
+          <label for="txt-image-name" class="fb-text-label">Image Name<span class="fb-required">*</span></label>
+          <input type="text" class="form-control" name="txt-image-name" id="txt-image-name" required="required" aria-required="true">
+        </div>
+        
+        <div class="fb-text form-group field-txt-image-url">
+          <label for="txt-image-url" class="fb-text-label">Image URL<span class="fb-required">*</span></label>
+          <input type="text" class="form-control" name="txt-image-url" id="txt-image-url" required="required" aria-required="true">
+        </div>
+        
+        <div class="fb-button form-group field-button-1512333770465">
+          <button type="button" class="btn btn-success" name="button-1512333770465" style="success" id="button-save">Save</button>
+        </div>
+      </div>
+    </form>
 
  
   </div>
