@@ -112,10 +112,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <input id='txt-image-url'  style="form-control "> </input>
 
    
-<input id='txt-music-url'  style=" "> </input>
+<input id='txt-music-url'  style="form-control "> </input>
 
    
-<input id='txt-music-name'  style=" "> </input>
+<input id='txt-music-name'  style="form-control "> </input>
 
    
 <div id='container-form'  style=" "> </div>
