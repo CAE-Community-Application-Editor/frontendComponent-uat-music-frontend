@@ -106,10 +106,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </table>
 
    
-<input id='txt-image-name'  style=" "> </input>
+<input id='txt-image-name'  style="form-control "> </input>
 
    
-<input id='txt-image-url'  style=" "> </input>
+<input id='txt-image-url'  style="form-control "> </input>
 
    
 <input id='txt-music-url'  style=" "> </input>
