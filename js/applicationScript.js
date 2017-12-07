@@ -42,6 +42,12 @@ var init = function() {
 
   client = new Las2peerWidgetLibrary("http://cloud10.dbis.rwth-aachen.de:8080/musicApp/v1.0/", iwcCallback);
 
+  $('#button-save').on('click', function() {
+    //start parameter initiation
+
+    //end parameter initiation
+    submitMusic();
+  })
 
 
 }
@@ -50,6 +56,27 @@ var initClient = function(y) {
   this.client = new Las2peerWidgetLibrary("", iwcCallback, "127.0.0.1:8073", y);
   console.log("Client initialized");
 };
+
+// submitMusic
+var submitMusic = function(){
+
+//start variable declaration
+   var returnData = null;
+
+//end variable declaration
+
+   var postData = null;
+  client.sendRequest("GET", post, postData, "text/plain", {}, false,
+  function(data, type) {
+    console.log(data);
+  },
+  function(error) {
+    console.log(error);
+  });
+
+  //Additional own javascript
+ return returnData;
+}
 
 
 $(document).ready(function() {
