@@ -121,6 +121,25 @@ var getMusic = function(){
             );
             
         });
+  },
+  function(data) {
+    console.log("GET DATA");
+    console.log(data);
+    $("#table-music-body").html("");
+        data.forEach(function(item) {
+            console.log(item);
+            // append to table
+            $("#table-music-body").append(
+                "<tr>" + 
+                    "<td>" + item["imageName"] + "</td>" +
+                    "<td><img src='" + item["imageUrl"] + "' width='100'></td>" +
+                    "<td>" + item["musicName"] + "</td>" +
+                    "<td><audio controls><source src='" + item["musicUrl"] + "' type='audio/mpeg'>" +
+                    "Your browser does not support the audio element.</audio></td>" +
+                "</tr>"
+            );
+            
+        });
   });
 
   //Additional own javascript
