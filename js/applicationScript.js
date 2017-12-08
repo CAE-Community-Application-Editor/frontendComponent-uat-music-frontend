@@ -86,6 +86,7 @@ var submitMusic = function(){
   },
   function(error) {
     console.log(error);
+    getMusic();
   });
 
   //Additional own javascript
@@ -120,10 +121,6 @@ var getMusic = function(){
             );
             
         });
-  },
-  function(error) {
-    console.log("ERROR GET DATA");
-    console.log(error);
   });
 
   //Additional own javascript
