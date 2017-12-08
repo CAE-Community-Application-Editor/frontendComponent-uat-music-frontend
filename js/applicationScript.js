@@ -107,6 +107,7 @@ var getMusic = function(){
     console.log(data);
     $("#table-music-body").html("");
         data.forEach(function(item) {
+            console.log(item);
             // append to table
             $("#table-music-body").append(
                 "<tr>" + 
