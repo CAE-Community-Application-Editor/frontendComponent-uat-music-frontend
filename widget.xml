@@ -87,6 +87,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <script type="text/javascript" src="http://cloud10.dbis.rwth-aachen.de:8088/frontendComponent-uat-music-frontend/js/applicationScript.js"></script>
   <script type="text/javascript" src="http://cloud10.dbis.rwth-aachen.de:8088/frontendComponent-uat-music-frontend/js/bootstrap.js"></script>
 
+  <style>
+  .container-fluid {
+    overflow-y: scroll;
+    height: 750px;
+  }
+  </style>
+  
 </head>
 <body>
 
